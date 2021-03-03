@@ -1,0 +1,108 @@
+<div class="menu" id="menu">
+    <h2 class="menu__title">Our Menu</h2>
+
+    <div class="menu__contents">
+
+        <div class="menu__left">
+            <div class="menu__left__t1 t t1">
+                <div>
+                    <h4>Burger</h4>
+                    <label for="i1">amount:</label>
+                    <input class="i" id="i1" type="number" style="width:100px" #burgers min="0" max="100">
+                </div>
+
+                <h4 class="menu__contents__left__t1__price price">price: 10$</h4>
+                <div >
+                    <button (click)="updateBurgers(burgers)" class="menu__contents__left__t1__add add">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="menu__left__t2 t">
+                <div>
+                    <h4>Pizza</h4>
+                    <label for="i2">amount:</label>
+                    <input class="i" id="i2" type="number" style="width:100px" #pizzas min="0" max="100">
+                </div>
+
+                <h4 class="menu__contents__left__t2__price price">price: 12$</h4>
+                
+                <div >
+                    <button (click)="updatePizzas(pizzas)" class="menu__contents__left__t2__add add">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="menu__left__t3 t">
+                <div>
+                    <h4>Khachapuri</h4>
+                    <label for="i3">amount:</label>
+                    <input class="i" id="i3" type="number" style="width:100px" #adjarians min="0" max="100">
+                </div>
+
+                <h4 class="menu__contents__left__t3__price price">price: 15$</h4>
+                <div >
+                    <button (click)="updateAdjs(adjarians)" class="menu__contents__left__t3__add add">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="menu__left__t4 t t4">
+                <div>
+                    <h4>Cake</h4>
+                    <label for="i4">amount:</label>
+                    <input class="i" id="i4" type="number" style="width:100px" #cakes min="0" max="100">
+                </div>
+
+                <h4 class="menu__contents-left__t4__price price">price: 10$</h4>
+                
+                <div >
+                    <button (click)="updateCakes(cakes)" class="menu__contents__left__t4__add add">Add To Cart</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="menu__right">
+           
+            <div *ngIf="showBurger" class="menu__right__t1 t t1">
+                <div>
+                    <h4>Burger</h4>
+                    <h4>{{burgerAmount}}</h4>
+                    <h4>{{burgersPrice}}</h4>
+                </div>
+
+            </div>
+            
+            <div *ngIf="showPizza" class="menu__right__t2 t">
+                <div>
+                    <h4>Pizza</h4>
+                    <h4>{{pizzaAmount}}</h4>
+                    <h4>{{pizzasPrice}}</h4>
+                </div>
+
+            </div>
+            
+            <div *ngIf="showKhachapuri" class="menu__right__t3 t">
+                <div>
+                    <h4>Khachapuri</h4>
+                    <h4 class="menu__right__t3__amount">{{adjAmount}}</h4>
+                    <h4 class="menu__right__t3__price">{{adjsPrice}}</h4>
+                </div>
+                
+            </div>
+            
+            <div *ngIf="showCake" class="menu__right__t4 t t4">
+                <div>
+                    <h4>Cake</h4>
+                    <h4>{{cakeAmount}}</h4>
+                    <h4>{{cakesPrice}}</h4>
+                </div>
+            </div>
+
+            <div class="menu__right__t5 t5 t">
+                <h4>The Full Price Is {{fullPrice}}$</h4>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,190 @@
+$myblue: rgb(116, 202, 218);
+$gray1: rgba(48, 50, 61, 0.8);
+$gray2: rgba(22, 22, 36, 0.8);
+$back:  rgba(48, 50, 61, 0.9);
+
+.menu{
+    background-color: $back;
+    padding: 20px;
+    margin: -35px 40px 0px 40px;
+
+    @media only screen and(max-width: 425px){
+        margin: 0px;
+        border: none;
+        border-radius: 0px;
+    }
+    
+     display: flex;
+     flex-direction: column;
+
+     border: 3px solid $myblue;
+     border-radius: 10px;
+ 
+     font-size: 20px;
+     position: relative;
+ 
+     .menu__title{
+         text-align: center;
+         color: chocolate;
+         margin: 14px;
+     }
+     
+     @media only screen and(max-width:768px){
+        .menu__contents{
+            display: flex;
+            flex-direction: column;
+            
+            .menu__left, .menu__right{
+                justify-content: center;
+                width: 98%;    
+                flex-direction: column;            
+            }
+        } 
+
+    }
+
+    @media only screen and(min-width:768px){
+
+        .menu__left{
+            width: 48%;
+        }
+        .menu__right{
+            width: 48%;
+            
+            div{
+                width: 100%;
+            }
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+     .menu__contents{
+         display: flex;
+         color: chocolate;
+         margin-bottom: 30px;
+        
+         .menu__left{
+             margin: 10px;
+             border: 2px solid $myblue;
+             border-radius: 10px;
+             
+             @media only screen and(max-width: 425px){
+                 margin: 10px auto;
+                 padding: 0px;
+                }
+                .t1{
+                    border-top-left-radius: 7px;
+                    border-top-right-radius: 7px;
+            }
+            
+            .t4{
+                border-bottom-left-radius: 7px;
+                border-bottom-right-radius: 7px;
+            }
+
+            .t{
+                
+                .i{
+                    background-color: blue;
+                    color: white;
+                    font-size: 17px;
+                    border: 1px solid $myblue;
+                    border-radius: 2px;
+                 
+                }
+
+                display: flex;
+                justify-content: space-between;
+                
+                border: 1px solid $myblue;
+                padding: 7px;
+                height: 25%;
+
+                h4, label{
+                    margin: 10px;
+                }
+
+                .price{
+                    margin: auto;
+                }
+                
+                .add{
+                    font-size: 19px;
+                    padding: 5px;
+                    height: 100%;
+                    
+                    
+                    border-radius: 4px;
+                    border: 2px solid $myblue;
+                    background-color: blue;
+                    color: white;
+                    
+                    &:hover{
+                        cursor: pointer;
+                        color: chocolate;
+                        border: 2px solid chocolate;
+                        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.8), 0 17px 50px 0 rgba(0,0,0,0.7);
+                    }
+                    
+                }
+            }
+        }
+        
+        .menu__right{
+
+            margin: 10px;
+            @media only screen and(max-width: 425px){
+                margin: auto;
+                padding: 0px;
+            }
+            
+            margin: 10;
+            border: 2px solid $myblue;
+            border-radius: 10px;
+            display: flex;
+
+            .t{
+                border: 1px solid $myblue;
+                height: 20%;
+
+                h4{
+                    margin: 20px;
+                }
+
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    h4{
+                        width: 33%;
+                    }
+                }
+
+                .menu__right__t3__amount, .menu__right__t3__price{
+                    margin-left: 11px;
+                }
+            }
+
+            .t1{
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+            }
+
+            .t5{
+                border-bottom-left-radius: 7px;
+                border-bottom-right-radius: 7px;
+
+                display: flex;
+                justify-content: center;
+            }
+            
+
+
+
+
+        }
+    }
+      
+ }

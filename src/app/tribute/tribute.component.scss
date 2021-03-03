@@ -1,0 +1,111 @@
+$myblue: rgb(116, 202, 218);
+$gray1: rgba(61, 48, 48, 0.8);
+$gray2: rgba(22, 22, 36, 0.8);
+$back:  rgba(48, 50, 61, 0.9);
+
+.tribute{
+    margin: 65px 40px 0px 40px;
+    padding: 0px 0.5%;
+    
+    @media only screen and(max-width: 425px){
+        margin: 10px 0px;
+        padding: 0px;
+        border-radius: 0px;
+        border: none;
+    }
+    
+    display: flex;
+    position: relative;
+    
+    background-color: $back;
+    border: 3px solid $myblue;
+    border-radius: 10px;
+    font-size: 20px;
+    
+    .title{
+        text-align: center; 
+        color: chocolate;
+        margin: 15px;
+        
+        @media only screen and(max-width: 425px){
+            margin: 7px;
+        }
+    }
+    
+    .content{
+        
+        @media only screen and(max-width: 425px){
+            margin: 0px;
+            padding: 0px;
+            border-radius: 0px;
+            border: none;
+        }
+
+        margin-bottom: 10px;
+        color: chocolate;
+    }
+    
+}
+
+@media only screen and (max-width:768px){
+    .text {
+        font-size: 0.8vw;
+    }
+    
+}
+
+/****************JS slidesow*********************/
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+    overflow: hidden;
+    border: 2px solid $myblue;
+    border-radius: 10px;
+    margin: auto;
+    max-width: 90%;
+    position: relative;
+    margin-bottom: 15px;
+
+}
+
+.text {
+    color: chocolate;
+    font-size: 1.1vw;
+    padding: 8px 12px;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 30%;
+    height: 40%;
+    background-color: $back;
+    border: 2px solid $myblue;
+    border-radius: 0px 5px 0px 5px;
+    
+    text-align: center;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.numbertext {
+    color: $myblue;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}

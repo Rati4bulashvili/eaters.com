@@ -1,0 +1,177 @@
+$myblue: rgb(116, 202, 218);
+$gray1: rgba(48, 50, 61, 0.8);
+$gray2: rgba(22, 22, 36, 0.8);
+$back:  rgba(48, 50, 61, 0.9);
+
+.eaters_logo{
+    margin: 0px;
+}
+
+#logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    color: chocolate;
+    text-shadow: 0px 1px black, 1px 0px black, -1px 0px black, 0px -1px black;
+    font-size: 4rem;
+    display: inline;
+    padding-left: 10px;
+
+    @media only screen and (max-width: 768px){
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo__dotcom{
+        color: #545454;
+    }
+
+    &:hover{
+        cursor: pointer;
+        #logo__dotcom{
+            color: chocolate;
+        }
+    }
+}
+
+#fornav{
+    background-color: $gray1;
+    z-index: 1;
+    position: sticky;
+
+    top: -5.4rem;
+    width: 100%;
+    padding: 0px;
+    
+   &:hover{
+            background-color: $gray2;
+        }
+    .fornav__description1{
+        font-family: Georgia 'Times New Roman', Times, serif;
+        font-size: 1.8rem;
+        color: $myblue;
+        @media only screen and (max-width: 768px){
+            display: none;
+        }
+        
+        position: absolute;
+        top: -11px;
+        right: 4rem;
+    }
+    
+/**************navbar********************/
+
+    .fornav__nav{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+
+        @media only screen and (max-width: 768px){
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .el{
+
+            @media only screen and (max-width: 768px){
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            @media only screen and (max-width: 425px){
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            margin-left: -4px;
+            display: inline-block;
+            font-size: 1.8rem;
+            padding: 10px;       
+            color: $myblue;    
+            transition-duration: 0.4s;
+             
+            &:hover{
+                background-color: black; 
+                color: rgb(193, 237, 252);
+                margin-top: -10px;
+                font-size: 20px;
+            }
+        }
+    }
+    
+}
+
+/**********foodpics**********/
+.slider{
+    @media only screen and (max-width: 768px){
+            height: 550px;
+    }
+    @media only screen and(max-width:425px){
+        
+        top: 0;
+        right: 0px;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    top: -100px;
+}
+
+.bar:hover{
+    background: #fff;
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 25%;
+    transition: 0.6s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -25%;
+}
+#r3:checked ~ .s1{
+    margin-left: -50%;
+}
+#r4:checked ~ .s1{
+    margin-left: -75%;
+}
+
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
