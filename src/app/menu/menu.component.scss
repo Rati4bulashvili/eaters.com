@@ -8,6 +8,10 @@ $back:  rgba(48, 50, 61, 0.9);
     padding: 20px;
     margin: -35px 40px 0px 40px;
 
+    @media only screen and (max-width: 400px){
+        padding: 20px 0px;
+    }
+
     @media only screen and(max-width: 425px){
         margin: 0px;
         border: none;
@@ -61,9 +65,9 @@ $back:  rgba(48, 50, 61, 0.9);
     }
 
      .menu__contents{
-         display: flex;
-         color: chocolate;
-         margin-bottom: 30px;
+        display: flex;
+        color: chocolate;
+        margin-bottom: 30px;
         
          .menu__left{
              margin: 10px;
